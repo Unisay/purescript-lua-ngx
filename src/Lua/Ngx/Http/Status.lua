@@ -1,0 +1,40 @@
+return {
+    continue = ngx.HTTP_CONTINUE
+    , switchingProtocols = ngx.HTTP_SWITCHING_PROTOCOLS
+    , ok = ngx.HTTP_OK
+    , created = ngx.HTTP_CREATED
+    , accepted = ngx.HTTP_ACCEPTED
+    , noContent = ngx.HTTP_NO_CONTENT
+    , partialContent = ngx.HTTP_PARTIAL_CONTENT
+    , specialResponse = ngx.HTTP_SPECIAL_RESPONSE
+    , movedPermanently = ngx.HTTP_MOVED_PERMANENTLY
+    , movedTemporarily = ngx.HTTP_MOVED_TEMPORARILY
+    , seeOther = ngx.HTTP_SEE_OTHER
+    , notModified = ngx.HTTP_NOT_MODIFIED
+    , temporaryRedirect = ngx.HTTP_TEMPORARY_REDIRECT
+    , permanentRedirect = ngx.HTTP_PERMANENT_REDIRECT
+    , badRequest = ngx.HTTP_BAD_REQUEST
+    , unauthorized = ngx.HTTP_UNAUTHORIZED
+    , paymentRequired = ngx.HTTP_PAYMENT_REQUIRED
+    , forbidden = ngx.HTTP_FORBIDDEN
+    , notFound = ngx.HTTP_NOT_FOUND
+    , notAllowed = ngx.HTTP_NOT_ALLOWED
+    , notAcceptable = ngx.HTTP_NOT_ACCEPTABLE
+    , requestTimeout = ngx.HTTP_REQUEST_TIMEOUT
+    , conflict = ngx.HTTP_CONFLICT
+    , gone = ngx.HTTP_GONE
+    , upgradeRequired = ngx.HTTP_UPGRADE_REQUIRED
+    , tooManyRequests = ngx.HTTP_TOO_MANY_REQUESTS
+    , close = ngx.HTTP_CLOSE
+    , illegal = ngx.HTTP_ILLEGAL
+    , internalServerError = ngx.HTTP_INTERNAL_SERVER_ERROR
+    , notImplemented = ngx.HTTP_NOT_IMPLEMENTED
+    , methodNotImplemented = ngx.HTTP_METHOD_NOT_IMPLEMENTED
+    , badGateway = ngx.HTTP_BAD_GATEWAY
+    , serviceUnavailable = ngx.HTTP_SERVICE_UNAVAILABLE
+    , gatewayTimeout = ngx.HTTP_GATEWAY_TIMEOUT
+    , versionNotSupported = ngx.HTTP_VERSION_NOT_SUPPORTED
+    , insufficientStorage = ngx.HTTP_INSUFFICIENT_STORAGE
+    , get = function() return ngx.status end
+    , set = function(status) return function() ngx.status = status end end
+}
