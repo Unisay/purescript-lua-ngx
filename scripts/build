@@ -2,4 +2,7 @@
 
 echo "Building..."
 
-spago build
+spago build -u '-g corefn'
+
+pslua --foreign-path . --ps-output output --entry Lua.Ngx --lua-output-file dist/Lua.Ngx.lua
+pslua --foreign-path . --ps-output output --entry Lua.Ngx.Http.Status --lua-output-file dist/Lua.Ngx.Http.Status.lua
